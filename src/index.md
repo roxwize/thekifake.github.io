@@ -1,6 +1,14 @@
 # Theki's Website
 
-[projects](./projects/index.html) | [man](./man.html)
+<ul>
+<li><div class="silk-companion application_start"></div><a href="./projects/">projects</a></li>
+
+<li><div class="silk-companion book_magnify"></div><a href="./tutorials/">tutorials</a></li>
+
+<li><div class="silk-companion cake_out"></div><a href="./man.html">misc</a></li>
+
+<li><div class="silk-companion control_remove"></div><a href="./LICENCE">licence</a></li>
+</ul>
 
 [![pages-build-deployment](https://github.com/thekifake/thekifake.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=md)](https://github.com/thekifake/thekifake.github.io/actions/workflows/pages/pages-build-deployment)
 ![file count](https://img.shields.io/github/directory-file-count/thekifake/thekifake.github.io)

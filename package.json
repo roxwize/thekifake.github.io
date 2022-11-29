@@ -26,6 +26,7 @@
   "homepage": "https://github.com/thekifake/thekifake.github.io#readme",
   "dependencies": {
     "del": "^7.0.0",
-    "serve": "^14.1.2"
+    "serve": "^14.1.2",
+    "silk-companion": "^0.2.3"
   }
 }

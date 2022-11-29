@@ -1,0 +1,31 @@
+<!-- inject:css -->
+<link rel="stylesheet" href="/md-themes/display.css">
+<link rel="stylesheet" href="/md-themes/modest.css">
+<link rel="stylesheet" href="/md-themes/silk-companion.css">
+<!-- endinject -->
+<h1 id="how-to-self-host-this-website">How to self-host this website</h1>
+<p>You might want to make changes to stuff on this website or modify it to make your own version. That&#39;s fine, you can do that. Here&#39;s how to do it on Windows:</p>
+<ol>
+<li>CTRL+R, type &quot;cmd&quot;, then press Enter. Your command prompt will open.</li>
+<li>Make sure you have node.js installed on your system. Type <code>node --version</code> and hit the Enter key. If you see something like <code>v14.20.1</code>, you should be good to go. If you&#39;re still unsure, type <code>npm --version</code> and <code>npx --version</code> to see if you have both included as well.</li>
+<li>Clone the website from Git. You can use <code>git clone https://github.com/thekifake/thekifake.github.io.git</code> or or a Git client to clone it anywhere.</li>
+<li>Navigate to the directory with <code>cd [directory]</code>.</li>
+<li>Run <code>npm install</code> and wait a while. Make sure you have internet access.</li>
+<li>Now, run <code>node .</code> in the root directory where the <em>index.js</em> file is. You should see <code>Running web server at http://localhost:1234 :)</code>. If you get an error, try changing the port by going to index.js and changing the PORT variable where it is declared at line 4.</li>
+<li>If you have made any changes to the website or would like to re-build its contents, run <code>gulp</code> in the commandline. From there, Gulp will automatically watch for changes to specific files. Saving or creating a Markdown file will automatically trigger the conversion process, and inserting one or more images into the <em>img/nonop</em> folder will automatically convert it to an optimised WebP image.</li>
+</ol>
+<h2 id="directories">Directories</h2>
+<h3 id="img">img</h3>
+<p>This is where the website images are stored. If you want to access an image, link to it with <code>./img/[image name].webp</code>. <strong>DO NOT</strong> place anything other than a WebP in the root directory. If you do not have a WebP image on hand, place a JPEG or PNG file in the <em>nonop</em> directory and run <code>gulp optimiseImages</code>.</p>
+<h3 id="md-themes">md-themes</h3>
+<p>This is where themes for how Markdown is displayed go here. Every file in here is individually embedded in every converted Markdown file. If you&#39;d like, you can replace the default <code>modest.css</code> theme in the directory or add another CSS file and replace, modify, or add some aspects.</p>
+<p>A minor exception to this rule is <em>silk-companion</em>; The CSS file uses a PNG in the same directory, but this is generally OK to do.</p>
+<h3 id="src">src</h3>
+<p>This is where your Markdown files go. They are converted into .html files of the same name inside of the root directory. Subdirectories create their own subdirectories in the root folder as well; see <a href="#miscellaneous-directories">Miscellaneous directories</a>.</p>
+<h3 id="miscellaneous-directories">Miscellaneous directories</h3>
+<p><strong>projects</strong> (and other directories created from subfolders in the <em>src</em> directory) is safe to delete, and in most cases you it is advisable as it will likely not apply to any modifications you are making to this website.</p>
+<h2 id="files">Files</h2>
+<h3 id="gulpfilejs">Gulpfile.js</h3>
+<p>This is where the build process takes place! You can modify or analyse it however you&#39;d like.</p>
+<h3 id="indexjs">index.js</h3>
+<p>This is how the website is hosted locally. It uses serve and node-http.</p>
