@@ -13,7 +13,7 @@ export function optimiseImages() {
   src(nonop)
     .pipe(
       webp({
-        preset: "picture",
+        preset: "default",
       })
     )
     .pipe(dest("./img"));
