@@ -1,0 +1,47 @@
+<!-- inject:css -->
+<link rel="stylesheet" href="/md-themes/display.css">
+<link rel="stylesheet" href="/md-themes/modest.css">
+<link rel="stylesheet" href="/md-themes/silk-companion.css">
+<!-- endinject -->
+<h1 id="blank-cheque">Blank Cheque</h1>
+<h2 id="story-format">Story format</h2>
+<p>Stories are meant to be saved in a JSON object to be later condensed in a Base64 string. They&#39;re meant to be layed out like this:</p>
+<pre><code class="language-js">&quot;Everday I imagine myself &quot;,
+  { w: WordType.VERB, e: &quot;ing&quot; },
+  &quot; &quot;,
+  { w: WordType.PRNOUN },
+  &quot; &quot;,
+  { w: WordType.ADV },
+  &quot; simply because I &quot;,
+  { w: WordType.VERB, t: &quot;Past tense&quot; },
+  &quot; it&quot;;
+</code></pre>
+<p>It&#39;s just an array of sentences, except areas where blanks are supposed to be are replaced by an object containing:</p>
+<table>
+<thead>
+<tr>
+<th align="right">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">w</td>
+<td align="left">A constant in the <code>WordType</code> object detailing what kind of word it is</td>
+</tr>
+<tr>
+<td align="right">e</td>
+<td align="left">The ending of the word; optional</td>
+</tr>
+<tr>
+<td align="right">t</td>
+<td align="left">The tense of the word in the form of a string; can also be used as a prefix</td>
+</tr>
+<tr>
+<td align="right">d</td>
+<td align="left">Any additional information about the word goes here</td>
+</tr>
+</tbody></table>
+<p>Note that <strong>spaces are not automatically appended to the ends of words</strong>. You have to put them in yourself. Another thing to remember is that if a story has the word &quot;a&quot; or &quot;an&quot; followed by a blank, separate the word like this:</p>
+<pre><code class="language-js">&quot;Hi. I am &quot;, &quot;an &quot;, { w: WordType.NOUN };
+</code></pre>
+<p>You must replace the a/an with &quot;an &quot;, space included.</p>
