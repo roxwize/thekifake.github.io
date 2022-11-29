@@ -1,4 +1,4 @@
-# [Man](./numbers.html)
+# Man
 
 ![Man](./img/man.webp)
 
