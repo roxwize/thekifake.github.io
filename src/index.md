@@ -2,6 +2,8 @@
 
 [projects](./projects/index.html) | [man](./man.html)
 
+[![pages-build-deployment](https://github.com/thekifake/thekifake.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=md)](https://github.com/thekifake/thekifake.github.io/actions/workflows/pages/pages-build-deployment)
+
 This is my third website besides [theki.club](https://theki.club) and [theki.noncities](https://theki.noncities.com). Whereas the first one is dedicated to whatever and the second one is dedicated to older browsers, this will be dedicated to sharing my projects and presenting them as simply and as straightforward as possible. That means that all I have to do to present you stuff is to write a couple of Markdown files and link them together, a bit like the Gemini protocol.
 
 That's not to say I can't still use HTML:
